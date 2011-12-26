@@ -1,11 +1,11 @@
-# revision 24524
+# revision 24853
 # category Package
 # catalog-ctan /macros/latex/contrib/ifetex
-# catalog-date 2011-11-06 20:22:58 +0100
+# catalog-date 2011-12-15 16:49:50 +0100
 # catalog-license lppl1.3
-# catalog-version 1.1
+# catalog-version 1.2
 Name:		texlive-ifetex
-Version:	1.1
+Version:	1.2
 Release:	1
 Summary:	Provides \ifetex switch
 Group:		Publishing
@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 The package provides the switch \ifetex which indicates whether
@@ -32,19 +29,19 @@ is defined as a primitive; if it is, the package assumes e-TeX
 features are available.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
