@@ -28,16 +28,8 @@ is already defined. The package's test is whether \eTeXversion
 is defined as a primitive; if it is, the package assumes e-TeX
 features are available.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -53,7 +45,6 @@ features are available.
 #- source
 %doc %{_texmfdistdir}/source/latex/ifetex/ifetex.dtx
 %doc %{_texmfdistdir}/source/latex/ifetex/ifetex.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -64,5 +55,3 @@ features are available.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
