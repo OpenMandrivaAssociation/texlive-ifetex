@@ -55,3 +55,19 @@ features are available.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2-2
++ Revision: 752690
+- Rebuild to reduce used resources
+
+* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.2-1
++ Revision: 745213
+- texlive-ifetex
+
+* Thu Nov 10 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.1-1
++ Revision: 729665
+- texlive-ifetex
+- texlive-ifetex
+
