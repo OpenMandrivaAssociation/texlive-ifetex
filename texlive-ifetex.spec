@@ -9,7 +9,7 @@ Version:	1.2a
 Release:	3
 Summary:	Provides \ifetex switch
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ifetex
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/ifetex
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ifetex.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ifetex.doc.tar.xz
